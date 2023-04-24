@@ -9,19 +9,21 @@
       
       
       
+        <link rel="prev" href="../wsl2-zsh/">
       
-        <link rel="next" href="guides/linux/tips/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../../../best_practices/gitflow/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
-        <title>marden.io</title>
+        <title>WSL 2 - docker - marden.io</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
       
       
 
@@ -37,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello-world" class="md-skip">
+        <a href="#wsl-2-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +77,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="marden.io" class="md-header__button md-logo" aria-label="marden.io" data-md-component="logo">
+    <a href="../../.." title="marden.io" class="md-header__button md-logo" aria-label="marden.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              WSL 2 - docker
             
           </span>
         </div>
@@ -165,7 +167,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="marden.io" class="md-nav__button md-logo" aria-label="marden.io" data-md-component="logo">
+    <a href="../../.." title="marden.io" class="md-nav__button md-logo" aria-label="marden.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -182,59 +184,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    Questions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -245,14 +199,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -261,7 +217,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -301,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/tips/" class="md-nav__link">
+      <a href="../../linux/tips/" class="md-nav__link">
         Tips
       </a>
     </li>
@@ -315,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/apache2.4/" class="md-nav__link">
+      <a href="../../linux/apache2.4/" class="md-nav__link">
         Apache2.4
       </a>
     </li>
@@ -329,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/fortigate-vpn/" class="md-nav__link">
+      <a href="../../linux/fortigate-vpn/" class="md-nav__link">
         Fortigate VPN
       </a>
     </li>
@@ -343,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/rsync/" class="md-nav__link">
+      <a href="../../linux/rsync/" class="md-nav__link">
         rsync
       </a>
     </li>
@@ -357,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/tar_openssl/" class="md-nav__link">
+      <a href="../../linux/tar_openssl/" class="md-nav__link">
         Tar Encrypted
       </a>
     </li>
@@ -376,14 +332,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -392,7 +350,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Windows
@@ -405,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-install/" class="md-nav__link">
+      <a href="../wsl2-install/" class="md-nav__link">
         WSL 2 - install
       </a>
     </li>
@@ -419,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-zsh/" class="md-nav__link">
+      <a href="../wsl2-zsh/" class="md-nav__link">
         WSL 2 - zsh
       </a>
     </li>
@@ -431,11 +389,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WSL 2 - docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         WSL 2 - docker
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-o-docker-no-ubuntu-wsl2" class="md-nav__link">
+    Instalando o docker no ubuntu (wsl2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rodando-o-docker-sem-o-sudo" class="md-nav__link">
+    Rodando o docker sem o sudo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -489,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="best_practices/gitflow/" class="md-nav__link">
+      <a href="../../../best_practices/gitflow/" class="md-nav__link">
         Git - Gitflow
       </a>
     </li>
@@ -538,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="articles/ci-cd/" class="md-nav__link">
+      <a href="../../../articles/ci-cd/" class="md-nav__link">
         CI/CD
       </a>
     </li>
@@ -587,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_guides/" class="md-nav__link">
+      <a href="../../../templatess/template_guides/" class="md-nav__link">
         Guides
       </a>
     </li>
@@ -601,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_best_practices/" class="md-nav__link">
+      <a href="../../../templatess/template_best_practices/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -615,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_articles/" class="md-nav__link">
+      <a href="../../../templatess/template_articles/" class="md-nav__link">
         Articles
       </a>
     </li>
@@ -637,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="todo/" class="md-nav__link">
+      <a href="../../../todo/" class="md-nav__link">
         To do
       </a>
     </li>
@@ -652,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -686,15 +692,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
+  <a href="#instalando-o-docker-no-ubuntu-wsl2" class="md-nav__link">
+    Instalando o docker no ubuntu (wsl2)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    Questions
+  <a href="#rodando-o-docker-sem-o-sudo" class="md-nav__link">
+    Rodando o docker sem o sudo
   </a>
   
 </li>
@@ -714,20 +720,72 @@
                   
 
 
-<h1 id="hello-world">Hello world</h1>
-<p>Welcome to my mind</p>
-<h2 id="index">Index</h2>
-<p>If you are just starting out, below you will find a suggestion of where to start.</p>
+<h1 id="wsl-2-docker">WSL 2 - docker</h1>
+<h2 id="instalando-o-docker-no-ubuntu-wsl2">Instalando o docker no ubuntu (wsl2)</h2>
+<p>Os passos a seguir já devem ser executados no Ubuntu do WSL 2.</p>
+<p>Atualizar S.O.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+<p>Instalar pacotes pré-requisito para o apt suportar pacotes via HTTPS:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
+</code></pre></div>
+<p>Adicionar a chave GPG para o repositório oficial do Docker no seu sistema:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>&lt;https://download.docker.com/linux/ubuntu/gpg&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+</code></pre></div>
+<p>Adicionar o repositório do Docker às fontes do APT:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span><span class="s2">&quot;deb [arch=amd64] &lt;https://download.docker.com/linux/ubuntu&gt; focal stable&quot;</span>
+</code></pre></div>
+<p>Atualizar a base do apt:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<p>Certificar-se de que o repositório do Docker está ativo no Ubuntu:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bash$<span class="w"> </span>apt-cache<span class="w"> </span>policy<span class="w"> </span>docker-ce
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>docker-ce:
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>Instalado:<span class="w"> </span><span class="o">(</span>nenhum<span class="o">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>Candidato:<span class="w"> </span><span class="m">5</span>:20.10.12~3-0~ubuntu-focal
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span>Tabela<span class="w"> </span>de<span class="w"> </span>versão:
+</code></pre></div>
+<p>Instalar o Docker</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bash$ sudo apt install docker-ce docker-compose
+</code></pre></div>
+<p>Verificar se o docker foi instalado</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>bash$<span class="w"> </span>ps<span class="w"> </span>fax<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+</code></pre></div>
+<h2 id="rodando-o-docker-sem-o-sudo">Rodando o docker sem o sudo</h2>
+<p>Adicionar seu usuário no grupo do docker</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+</code></pre></div>
+<p>Para que a alteração seja ativada, é necessário fazer um logoff ou executar o comando abaixo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>bash$<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+</code></pre></div>
+<p>Confirmar se seu usuário faz parte do grupo docker</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>bash$<span class="w"> </span>id<span class="w"> </span>-nG
+</code></pre></div>
+<h1 id="erro-ao-iniciar-o-docker-no-ubuntu-2204">Erro ao iniciar o Docker no Ubuntu 22.04</h1>
+<p>Se após o <strong>iniciar o serviço do Docker,</strong> estiver apresentando o erro <strong><em>Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?</em></strong> ao rodar o <strong>docker ps,</strong> siga os passos abaixo para corrigir:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>iptables
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># escolha a opção 1 iptables-legacy</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
+</code></pre></div>
+<h2 id="dica-para-windows-11">Dica para Windows 11</h2>
+<p>No Windows 11 permite especificar comandos para serem executados assim que o WSL for iniciado. Vamos colocar o daemon do docker para iniciar automaticamente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/wsl.conf
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">[</span>boot<span class="o">]</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nv">command</span><span class="o">=</span><span class="s2">&quot;service docker start&quot;</span>
+</code></pre></div>
+<p>Saia do <strong>WSL (Ubuntu)</strong>, abra o <strong>Powershell</strong> e reinicie o <strong>WSL</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="n">wsl</span> <span class="p">-</span><span class="n">-shutdown</span>
+</code></pre></div>
+<h2 id="fonte">Fonte</h2>
 <ul>
-<li><strong>Guides</strong> - Guides about technologies and methodologies</li>
-<li><strong>Best Practices</strong> - The name already says. best practices</li>
-<li><strong>Articles</strong> - Articles on technologies and methodologies</li>
-<li><strong>Templates</strong> - Templates to help with documentation</li>
-<li><strong>To do</strong> - Things I'm going to do</li>
-<li><strong>Changelog</strong> - My changelog</li>
+<li><a href="https://github.com/codeedu/wsl2-docker-quickstart">wsl2 docker quickstart</a></li>
+<li><a href="https://github.com/mardden/MIT-Cloud-DevOps/blob/main/WSL2.md">MIT Cloud DevOps</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-pt">how to install and use docker on ubuntu 20.04</a></li>
+<li><a href="https://github.com/codeedu/wsl2-docker-quickstart#docker-engine-docker-nativo-diretamente-instalado-no-wsl2*">docker engine docker nativo diretamente instalado no wsl2</a></li>
 </ul>
-<h2 id="questions">Questions</h2>
-<p>contact me @mardden (Marden Alcantara)</p>
 
 
 
@@ -765,10 +823,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
       
     
   </body>

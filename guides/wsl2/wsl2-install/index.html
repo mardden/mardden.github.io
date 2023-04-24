@@ -9,19 +9,21 @@
       
       
       
+        <link rel="prev" href="../../linux/tar_openssl/">
       
-        <link rel="next" href="guides/linux/tips/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../wsl2-zsh/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
-        <title>marden.io</title>
+        <title>WSL 2 - install - marden.io</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
       
       
 
@@ -37,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello-world" class="md-skip">
+        <a href="#wsl-2-install" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +77,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="marden.io" class="md-header__button md-logo" aria-label="marden.io" data-md-component="logo">
+    <a href="../../.." title="marden.io" class="md-header__button md-logo" aria-label="marden.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              WSL 2 - install
             
           </span>
         </div>
@@ -165,7 +167,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="marden.io" class="md-nav__button md-logo" aria-label="marden.io" data-md-component="logo">
+    <a href="../../.." title="marden.io" class="md-nav__button md-logo" aria-label="marden.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -182,59 +184,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    Questions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -245,14 +199,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -261,7 +217,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Guides
@@ -301,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/tips/" class="md-nav__link">
+      <a href="../../linux/tips/" class="md-nav__link">
         Tips
       </a>
     </li>
@@ -315,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/apache2.4/" class="md-nav__link">
+      <a href="../../linux/apache2.4/" class="md-nav__link">
         Apache2.4
       </a>
     </li>
@@ -329,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/fortigate-vpn/" class="md-nav__link">
+      <a href="../../linux/fortigate-vpn/" class="md-nav__link">
         Fortigate VPN
       </a>
     </li>
@@ -343,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/rsync/" class="md-nav__link">
+      <a href="../../linux/rsync/" class="md-nav__link">
         rsync
       </a>
     </li>
@@ -357,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/linux/tar_openssl/" class="md-nav__link">
+      <a href="../../linux/tar_openssl/" class="md-nav__link">
         Tar Encrypted
       </a>
     </li>
@@ -376,14 +332,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -392,7 +350,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Windows
@@ -403,11 +361,119 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WSL 2 - install
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         WSL 2 - install
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-o-wsl2-ubuntu" class="md-nav__link">
+    Instalando o WSL2 + Ubuntu
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalando o WSL2 + Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    Pré-requisitos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ativar-o-wsl-no-windows-10-via-powershell" class="md-nav__link">
+    Ativar o WSL no Windows 10 (via powershell)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-o-wsl-2" class="md-nav__link">
+    Instalar o WSL 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalar o WSL 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ativar-o-wsl-2" class="md-nav__link">
+    Ativar o WSL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-microsoft-store" class="md-nav__link">
+    Via Microsoft Store
+  </a>
+  
+    <nav class="md-nav" aria-label="Via Microsoft Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificar-se-o-ubuntu-2004-esta-com-wsl-2" class="md-nav__link">
+    Verificar se o Ubuntu 20.04 está com WSL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonte" class="md-nav__link">
+    Fonte
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -419,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-zsh/" class="md-nav__link">
+      <a href="../wsl2-zsh/" class="md-nav__link">
         WSL 2 - zsh
       </a>
     </li>
@@ -433,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guides/wsl2/wsl2-docker/" class="md-nav__link">
+      <a href="../wsl2-docker/" class="md-nav__link">
         WSL 2 - docker
       </a>
     </li>
@@ -489,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="best_practices/gitflow/" class="md-nav__link">
+      <a href="../../../best_practices/gitflow/" class="md-nav__link">
         Git - Gitflow
       </a>
     </li>
@@ -538,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="articles/ci-cd/" class="md-nav__link">
+      <a href="../../../articles/ci-cd/" class="md-nav__link">
         CI/CD
       </a>
     </li>
@@ -587,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_guides/" class="md-nav__link">
+      <a href="../../../templatess/template_guides/" class="md-nav__link">
         Guides
       </a>
     </li>
@@ -601,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_best_practices/" class="md-nav__link">
+      <a href="../../../templatess/template_best_practices/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -615,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="templatess/template_articles/" class="md-nav__link">
+      <a href="../../../templatess/template_articles/" class="md-nav__link">
         Articles
       </a>
     </li>
@@ -637,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="todo/" class="md-nav__link">
+      <a href="../../../todo/" class="md-nav__link">
         To do
       </a>
     </li>
@@ -652,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -686,15 +752,75 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    Index
+  <a href="#instalando-o-wsl2-ubuntu" class="md-nav__link">
+    Instalando o WSL2 + Ubuntu
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalando o WSL2 + Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    Pré-requisitos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ativar-o-wsl-no-windows-10-via-powershell" class="md-nav__link">
+    Ativar o WSL no Windows 10 (via powershell)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#questions" class="md-nav__link">
-    Questions
+  <a href="#instalar-o-wsl-2" class="md-nav__link">
+    Instalar o WSL 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalar o WSL 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ativar-o-wsl-2" class="md-nav__link">
+    Ativar o WSL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-microsoft-store" class="md-nav__link">
+    Via Microsoft Store
+  </a>
+  
+    <nav class="md-nav" aria-label="Via Microsoft Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificar-se-o-ubuntu-2004-esta-com-wsl-2" class="md-nav__link">
+    Verificar se o Ubuntu 20.04 está com WSL 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonte" class="md-nav__link">
+    Fonte
   </a>
   
 </li>
@@ -714,20 +840,45 @@
                   
 
 
-<h1 id="hello-world">Hello world</h1>
-<p>Welcome to my mind</p>
-<h2 id="index">Index</h2>
-<p>If you are just starting out, below you will find a suggestion of where to start.</p>
+<h1 id="wsl-2-install">WSL 2 - install</h1>
+<h2 id="instalando-o-wsl2-ubuntu">Instalando o WSL2 + Ubuntu</h2>
+<h3 id="pre-requisitos">Pré-requisitos</h3>
 <ul>
-<li><strong>Guides</strong> - Guides about technologies and methodologies</li>
-<li><strong>Best Practices</strong> - The name already says. best practices</li>
-<li><strong>Articles</strong> - Articles on technologies and methodologies</li>
-<li><strong>Templates</strong> - Templates to help with documentation</li>
-<li><strong>To do</strong> - Things I'm going to do</li>
-<li><strong>Changelog</strong> - My changelog</li>
+<li>Windows 10 Home ou Professional (versão 20.04 ou superior)</li>
+<li>Conta no Docker Hub (opcional para fazer pull de imagens)</li>
+<li>4GB de RAM ou mais</li>
 </ul>
-<h2 id="questions">Questions</h2>
-<p>contact me @mardden (Marden Alcantara)</p>
+<h2 id="ativar-o-wsl-no-windows-10-via-powershell">Ativar o WSL no Windows 10 (via powershell)</h2>
+<p>Execute o Powershell como administrador.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="n">dism</span><span class="p">.</span><span class="n">exe</span> <span class="p">/</span><span class="n">online</span> <span class="p">/</span><span class="nb">enable-feature</span> <span class="p">/</span><span class="n">featurename</span><span class="p">:</span><span class="n">VirtualMachinePlatform</span> <span class="p">/</span><span class="n">all</span> <span class="p">/</span><span class="n">norestart</span>
+</code></pre></div>
+<p>Para confirmar, ainda no powershell digite:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="n">wsl</span>
+</code></pre></div>
+<p>Reinicie o Windows para concluir a instalação do WSL.</p>
+<h2 id="instalar-o-wsl-2">Instalar o WSL 2</h2>
+<p>Baixar o kernel do WSL 2 do link <a href="https://docs.microsoft.com/pt-br/windows/wsl/wsl2-kernel">https://docs.microsoft.com/pt-br/windows/wsl/wsl2-kernel</a> e instalar o pacote.</p>
+<h3 id="ativar-o-wsl-2">Ativar o WSL 2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
+</code></pre></div>
+<h2 id="via-microsoft-store">Via Microsoft Store</h2>
+<p>Instalar o Ubuntu 20.04</p>
+<p><img alt="" src="../images/03.png" /></p>
+<p><img alt="" src="../images/04.png" /></p>
+<p><img alt="" src="../images/05.png" /></p>
+<p><img alt="" src="../images/06.png" /></p>
+<h3 id="verificar-se-o-ubuntu-2004-esta-com-wsl-2">Verificar se o Ubuntu 20.04 está com WSL 2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\&gt;</span> <span class="n">wsl</span> <span class="n">-l</span> <span class="n">-v</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">NAME</span>  <span class="n">STATE</span>  <span class="n">VERSION</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">*</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">.</span><span class="n">04</span>  <span class="n">Stopped</span>  <span class="n">2</span>
+</code></pre></div>
+<h2 id="fonte">Fonte</h2>
+<ul>
+<li><a href="https://www.thomasmaurer.ch/2019/06/install-wsl-2-on-windows-10/#:~:text=Install%20WSL%202%201%20Enable%20the%20Windows%20Subsystem,4%20Configure%20the%20distro%20to%20use%20WSL%202">Thomas Maurer - Install WSL 2 on Windows 10</a></li>
+<li><a href="https://docs.microsoft.com/pt-br/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">Microsoft - Guia de instalação wsl2</a></li>
+</ul>
 
 
 
@@ -765,10 +916,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
       
     
   </body>
