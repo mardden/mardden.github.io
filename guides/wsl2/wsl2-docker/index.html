@@ -15,7 +15,7 @@
         <link rel="next" href="../../../best_practices/gitflow/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
       
       
 
@@ -102,10 +102,6 @@
         </div>
       </div>
     </div>
-    
-      <form class="md-header__option" data-md-component="palette">
-        
-      </form>
     
     
     
@@ -724,44 +720,45 @@
 <h2 id="instalando-o-docker-no-ubuntu-wsl2">Instalando o docker no ubuntu (wsl2)</h2>
 <p>Os passos a seguir já devem ser executados no Ubuntu do WSL 2.</p>
 <p>Atualizar S.O.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
 </code></pre></div>
 <p>Instalar pacotes pré-requisito para o apt suportar pacotes via HTTPS:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>software-properties-common
 </code></pre></div>
 <p>Adicionar a chave GPG para o repositório oficial do Docker no seu sistema:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>&lt;https://download.docker.com/linux/ubuntu/gpg&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
 </code></pre></div>
 <p>Adicionar o repositório do Docker às fontes do APT:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span><span class="s2">&quot;deb [arch=amd64] &lt;https://download.docker.com/linux/ubuntu&gt; focal stable&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span><span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable&quot;</span>
 </code></pre></div>
 <p>Atualizar a base do apt:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
 </code></pre></div>
 <p>Certificar-se de que o repositório do Docker está ativo no Ubuntu:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bash$<span class="w"> </span>apt-cache<span class="w"> </span>policy<span class="w"> </span>docker-ce
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>docker-ce:
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>Instalado:<span class="w"> </span><span class="o">(</span>nenhum<span class="o">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>Candidato:<span class="w"> </span><span class="m">5</span>:20.10.12~3-0~ubuntu-focal
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span>Tabela<span class="w"> </span>de<span class="w"> </span>versão:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>apt-cache<span class="w"> </span>policy<span class="w"> </span>docker-ce
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>docker-ce:
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>Instalado:<span class="w"> </span><span class="o">(</span>nenhum<span class="o">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span>Candidato:<span class="w"> </span><span class="m">5</span>:20.10.12~3-0~ubuntu-focal
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span>Tabela<span class="w"> </span>de<span class="w"> </span>versão:
 </code></pre></div>
 <p>Instalar o Docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bash$ sudo apt install docker-ce docker-compose
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-compose
 </code></pre></div>
 <p>Verificar se o docker foi instalado</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>bash$<span class="w"> </span>ps<span class="w"> </span>fax<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ps<span class="w"> </span>fax<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>docker
 </code></pre></div>
 <h2 id="rodando-o-docker-sem-o-sudo">Rodando o docker sem o sudo</h2>
 <p>Adicionar seu usuário no grupo do docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>bash$<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
 </code></pre></div>
 <p>Para que a alteração seja ativada, é necessário fazer um logoff ou executar o comando abaixo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>bash$<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>su<span class="w"> </span>-<span class="w"> </span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
 </code></pre></div>
 <p>Confirmar se seu usuário faz parte do grupo docker</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>bash$<span class="w"> </span>id<span class="w"> </span>-nG
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>id<span class="w"> </span>-nG
 </code></pre></div>
 <h1 id="erro-ao-iniciar-o-docker-no-ubuntu-2204">Erro ao iniciar o Docker no Ubuntu 22.04</h1>
 <p>Se após o <strong>iniciar o serviço do Docker,</strong> estiver apresentando o erro <strong><em>Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?</em></strong> ao rodar o <strong>docker ps,</strong> siga os passos abaixo para corrigir:</p>
@@ -826,7 +823,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   </body>
